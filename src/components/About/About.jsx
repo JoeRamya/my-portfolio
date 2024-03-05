@@ -1,0 +1,52 @@
+import React from "react";
+
+import styles from "./About.module.css";
+import { getImageUrl } from "../../utils";
+
+export const About = () => {
+  return (
+    <section className={styles.container} id="about">
+      <h2 className={styles.title}>About</h2>
+      <div className={styles.content}>
+        <img
+          src={getImageUrl("about/aboutImage.png")}
+          alt="Me sitting with a laptop"
+          className={styles.aboutImage}
+        />
+        <ul className={styles.aboutItems}>
+          <li className={styles.aboutItem}>
+            <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
+            <div className={styles.aboutItemText}>
+              <h3>C++ Developer</h3>
+              <p>
+                A C++ developer for freshers writes and maintains code for
+                software applications using the C++ language.
+              </p>
+            </div>
+          </li>
+          <li className={styles.aboutItem}>
+            <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
+            <div className={styles.aboutItemText}>
+              <h3>Python Developer</h3>
+              <p>
+                A Python developer for fresheres writes and maintains code for
+                software applications using Python, focusing on versatility and
+                readability for efficient project development.
+              </p>
+            </div>
+          </li>
+          <li className={styles.aboutItem}>
+            <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon" />
+            <div className={styles.aboutItemText}>
+              <h3>UI Developer</h3>
+              <p>
+                I have developed multiple landing pages and have created design
+                systems as well
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  );
+};
